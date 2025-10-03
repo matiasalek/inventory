@@ -19,6 +19,10 @@ Guía para desplegar una aplicación en AWS usando diferentes métodos: manual, 
 4. **Security Group**: Puertos 22 (SSH), 80 (HTTP), 3000 (App)
 5. Crear/seleccionar Key Pair
 
+![EC2 Instance Screenshot](screenshots/Screenshot%202025-10-02%20at%2021-59-19%20Launch%20an%20instance%20EC2%20us-east-1.png)
+![KeyPair Screenshot](screenshots/Screenshot%202025-10-02%20at%2021-59-35%20Launch%20an%20instance%20EC2%20us-east-1.png)
+
+
 **Instalación en el servidor:**
 ```bash
 # Conectar
@@ -36,6 +40,9 @@ cd inventory
 npm install
 pm2 start app.js --name "inventory"
 ```
+
+
+
 ## 2. Despliegue con AWS CLI
 
 ### 2.1 Configuración Inicial
@@ -131,11 +138,6 @@ aws ec2 terminate-instances --instance-ids i-xxxxxxxxx
 # Eliminar Security Group y Key Pair
 aws ec2 delete-security-group --group-id $SG_ID
 aws ec2 delete-key-pair --key-name $KEY_NAME
-```
-
-### Elastic Beanstalk:
-```bash
-eb terminate mi-app-prod
 ```
 ## Conclusión
 
