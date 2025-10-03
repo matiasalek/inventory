@@ -14,8 +14,8 @@ Guía para desplegar una aplicación en AWS usando diferentes métodos: manual, 
 
 **En la Consola AWS:**
 1. EC2 → Launch Instance
-2. **AMI**: Ubuntu Server 22.04 LTS
-3. **Instance Type**: t2.micro
+2. **AMI**: Ubuntu Server 24.04 LTS
+3. **Instance Type**: t3.micro
 4. **Security Group**: Puertos 22 (SSH), 80 (HTTP), 3000 (App)
 5. Crear/seleccionar Key Pair
 
