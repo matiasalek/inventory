@@ -78,10 +78,10 @@ apt-get install -y nodejs git nginx
 npm install -g pm2
 useradd -m appuser
 cd /home/appuser
-git clone https://github.com/tu-usuario/tu-repo.git app
+git clone https://github.com/matiasalek/inventory.git app
 chown -R appuser:appuser app
 cd app && sudo -u appuser npm install
-sudo -u appuser pm2 start app.js --name "mi-app"
+sudo -u appuser pm2 start app.js --name "inventory"
 EOF
 ```
 
