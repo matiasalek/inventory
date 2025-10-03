@@ -31,10 +31,10 @@ sudo apt-get install -y nodejs git nginx
 sudo npm install -g pm2
 
 # Desplegar aplicación
-git clone https://github.com/tu-usuario/tu-repo.git
-cd tu-repo
+git clone https://github.com/matiasalek/inventory.git
+cd inventory
 npm install
-pm2 start app.js --name "mi-app"
+pm2 start app.js --name "inventory"
 ```
 
 ### 1.2 Con User Data (Automatización)
