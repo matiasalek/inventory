@@ -21,7 +21,7 @@ Guía para desplegar una aplicación en AWS usando diferentes métodos: manual, 
 
 ![EC2 Instance Screenshot](screenshots/Screenshot%202025-10-02%20at%2021-59-19%20Launch%20an%20instance%20EC2%20us-east-1.png)
 ![KeyPair Screenshot](screenshots/Screenshot%202025-10-02%20at%2021-59-35%20Launch%20an%20instance%20EC2%20us-east-1.png)
-
+![Sec Screenshot](screenshots/Screenshot%202025-10-02%20at%2021-59-50%20Launch%20an%20instance%20EC2%20us-east-1.png)
 
 **Instalación en el servidor:**
 ```bash
@@ -40,7 +40,7 @@ cd inventory
 npm install
 pm2 start app.js --name "inventory"
 ```
-
+![Server Running](screenshots/Screenshot%202025-10-02%20at%2022-10-25%20EC2%20Instance%20Connect%20us-east-1.png)
 
 
 ## 2. Despliegue con AWS CLI
@@ -112,9 +112,10 @@ PUBLIC_IP=$(aws ec2 describe-instances \
 
 echo "App disponible en: http://$PUBLIC_IP"
 ```
+![Server Running](screenshots/Screenshot%202025-10-02%20at%2022-35-06%20Instances%20EC2%20us-east-1.png)
 
 
-## 4. Comparación EC2 vs Elastic Beanstalk
+## 3. Comparación EC2 vs Elastic Beanstalk
 
 | Aspecto | EC2 | Elastic Beanstalk |
 |---------|-----|-------------------|
@@ -129,7 +130,7 @@ echo "App disponible en: http://$PUBLIC_IP"
 - **EC2**: Control total, configuraciones específicas, costos optimizados
 - **Elastic Beanstalk**: Despliegue rápido, auto-scaling, gestión simplificada
 
-## 5. Limpieza de Recursos
+## 4. Limpieza de Recursos
 
 ### EC2:
 ```bash
